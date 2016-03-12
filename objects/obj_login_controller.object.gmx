@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>global.typing = false;
+global.userScore = 0;
 </string>
           </argument>
         </arguments>

@@ -12,9 +12,11 @@
 ini_open("save.ini");
 
 if (ini_section_exists(global.username)) {
-    // ask if they're sure they want to load an existing account
+    // TODO: ask if they're sure they want to load an existing account
+    // load score
+    global.userScore = ini_read_real(global.username, "score", 0);
 } else {
-    // ask if they're sure that they want to make a new account
+    // TODO: ask if they're sure that they want to make a new account
     ini_write_string(global.username, "name", global.username);
 }
 
