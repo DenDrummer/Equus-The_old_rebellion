@@ -13,6 +13,7 @@ ini_write_string(global.username, "name", global.username);
     //ini_write_real(global.username, "achievement1", achievement1);
 // save preferences
 // save score
+ini_write_real(global.username, "score", global.userScore);
 // save any other important variables
 
 ini_close();
