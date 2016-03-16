@@ -3,7 +3,7 @@
 // [section (key) = value
 
 // open an ini file for saving
-ini_open("save.ini");
+ini_open(working_directory + "\save.ini");
 
 // save data
 ini_write_string(global.username, "name", global.username);
