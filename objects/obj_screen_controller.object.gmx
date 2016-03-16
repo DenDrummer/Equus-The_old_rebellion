@@ -71,7 +71,7 @@ draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 
 //draw text
-draw_text(view[0].x, view[0].y, "Score: " + global.userScore);
+draw_text(view_xview[1], view_yview[1], "Score: " + string(global.userScore));
 
 // reset alignment
 draw_set_halign(fa_left);
