@@ -34,6 +34,10 @@
         <sprite>sprites\spr_dummy_login_button</sprite>
       </sprites>
     </sprites>
+    <sprites name="character">
+      <sprite>sprites\spr_char_right</sprite>
+      <sprite>sprites\spr_char_left</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bkgr_dummy</background>
@@ -48,6 +52,7 @@
     <font>fonts\f_Equestria</font>
   </fonts>
   <objects name="objects">
+    <object>objects\obj_wall</object>
     <object>objects\obj_screen_controller</object>
     <objects name="top_down">
       <object>objects\obj_character</object>
@@ -55,12 +60,14 @@
         <object>objects\obj_auto_door</object>
         <object>objects\obj_door</object>
       </objects>
-      <object>objects\obj_wall</object>
     </objects>
     <objects name="login">
       <object>objects\obj_username_box</object>
       <object>objects\obj_login_controller</object>
       <object>objects\obj_login_button</object>
+    </objects>
+    <objects name="side_scroller">
+      <object>objects\obj_character_side_scroller</object>
     </objects>
   </objects>
   <rooms name="rooms">
