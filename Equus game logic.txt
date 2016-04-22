@@ -1,0 +1,55 @@
+STATS:
+	level
+	strength
+	defence
+	agility
+	luck
+	magic
+	magic defense
+ATTACK CALC:
+	normal attack:
+		attacker:
+			atkDmg = baseDmg + baseDmg * ( dmgmultiplier * strength);
+			if (random(maxLuck) < luck){
+				atkDmg *= critMultiplier;
+			}
+		defender:
+			if (attack.isAreaAttack()) {
+				if (random(maxAgility+50) < agility) {
+					defDmg = 0;
+					//dodged
+				} else {
+					defDmg = atkDmg / (1 + defence * defMultiplier);
+				}
+			} else {
+				if (random(maxAgility+10) < agility) {
+					defDmg = 0;
+					//dodged
+				} else {
+					defDmg = atkDmg / (1 + defence * defMultiplier);
+				}
+			}
+	magic attack:
+		attacker:
+			atkDmg = (baseDmg + baseDmg * ( dmgmultiplier * strength)) * (1 + magic * magicMultiplier);
+			if (random(maxLuck) < luck){
+				atkDmg *= critMultiplier;
+			}
+		defender:
+			if (attack.isAreaAttack()) {
+				if (random(maxAgility+50) < agility) {
+					defDmg = 0;
+					//dodged
+				} else {
+					defDmg = atkDmg / (1 + defence * defMultiplier);
+					defDmg /= 1 + magicDef * magicDefMultiplier;
+				}
+			} else {
+				if (random(maxAgility+10) < agility) {
+					defDmg = 0;
+					//dodged
+				} else {
+					defDmg = atkDmg / (1 + defence * defMultiplier);
+					defDmg /= 1 + magicDef * magicDefMultiplier;
+				}
+			}
