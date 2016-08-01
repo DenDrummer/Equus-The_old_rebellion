@@ -3,7 +3,7 @@
   <spriteName>spr_dummy_door</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -28,6 +28,7 @@
             <string>image_speed = 0;
 image_index = 0;
 solid = false;
+False = false;
 </string>
           </argument>
         </arguments>
@@ -85,7 +86,7 @@ notme           =   whether or not to exclude itself from the check
 */
 radius = 25;
 object = obj_character;
-pixelPerfect = true;
+pixelPerfect = false;
 notMe = true;
 if (collision_circle(x, y, radius, object, pixelPerfect, notMe)) {
     alarm_set(0, room_speed / 2);
@@ -113,7 +114,7 @@ if (collision_circle(x, y, radius, object, pixelPerfect, notMe)) {
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>false</string>
+            <string>False</string>
           </argument>
           <argument>
             <kind>0</kind>

@@ -23,7 +23,9 @@
     </datafile>
   </datafiles>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\Forgotten_Times</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="dummy_sprites">
       <sprite>sprites\spr_dummy_character</sprite>
@@ -38,6 +40,8 @@
       <sprite>sprites\spr_char_right</sprite>
       <sprite>sprites\spr_char_left</sprite>
     </sprites>
+    <sprite>sprites\spr_wall</sprite>
+    <sprite>sprites\spr_dummy_floor</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bkgr_dummy</background>
@@ -47,15 +51,22 @@
   <scripts name="scripts">
     <script>scripts\ini_save.gml</script>
     <script>scripts\ini_load.gml</script>
+    <script>scripts\scr_auto_tile.gml</script>
+    <script>scripts\scr_cam_mov.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\f_Equestria</font>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_wall</object>
     <object>objects\obj_screen_controller</object>
+    <objects name="Colideables">
+      <object>objects\obj_colideable</object>
+      <object>objects\obj_wall</object>
+      <object>objects\obj_wall2</object>
+    </objects>
     <objects name="top_down">
       <object>objects\obj_character</object>
+      <object>objects\obj_floor</object>
       <objects name="doors">
         <object>objects\obj_auto_door</object>
         <object>objects\obj_door</object>
@@ -74,6 +85,7 @@
     <room>rooms\login_screen</room>
     <rooms name="top_down">
       <room>rooms\dummy_room</room>
+      <room>rooms\dummy_wall_showcase</room>
     </rooms>
   </rooms>
   <help>
